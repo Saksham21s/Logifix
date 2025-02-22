@@ -1,40 +1,50 @@
 
-.home-hero{  
+
+.home-hero {
   background: url("../Assets/Background.jpg") center/cover no-repeat;
+  padding-top: 80px;
 }
+
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 700px;
   display: flex;
-  align-items: center;
+  padding-top: 170px;
   justify-content: flex-start;
   color: white;
-  padding: 0 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero .container {
   max-width: 800px;
-  margin-left: 130px;
+  width: 100%;
+  margin-left: 140px;
   text-align: left;
+}
+
+.hero-content {
   border-left: 3px solid brown;
-  padding: 20px;
+  padding-inline-start: 20px;
 }
 
 .hero h1 {
   font-weight: 800;
   line-height: 1.14em;
   margin-bottom: 24px;
-  font-size: 72px;
+  font-size: 64px;
 }
 
 .hero p {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 25px;
 }
 
 .hero-buttons {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .hero-buttons .btn {
@@ -44,70 +54,137 @@
   font-size: 16px;
   font-weight: 700;
   border-radius: 5px;
-  padding: 19px 40px;
+  padding: 16px 32px;
   position: relative;
-  overflow: hidden;
   color: white;
   background: #ff2600;
   border: none;
-  transition: background 0.3s ease-in-out;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-.btn-primary:hover {
+.hero-buttons .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
   background: black;
+  transition: left 0.3s ease-in-out;
+}
+
+.hero-buttons .btn:hover::before {
+  left: 0;
+}
+
+.hero-buttons .btn:hover {
+  color: white;
+  border:1px solid #ff2600;
+}
+
+.hero-buttons .btn span,  
+.hero-buttons .btn i { 
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+
+.TopCategory {
+  position: relative;
+  bottom: 150px;
+  left: 20%;
+  transform: translateX(-50%);
+  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
   .hero .container {
-      margin-left: 50px;
+    margin-left: 50px;
   }
+
   .hero h1 {
-      font-size: 60px;
+    font-size: 54px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero {
-      height: auto;
-      padding: 60px 20px;
-      text-align: center;
-      justify-content: center;
+    min-height:50vh;
+    padding-top: 10px;
   }
+
   .hero .container {
-      margin-left: 0;
-      border-left: none;
-      text-align: center;
+    margin-left: 0;
+    border-left: none;
+    text-align: left;
+    padding: 0 20px;
   }
+
   .hero h1 {
-      font-size: 50px;
+    font-size: 46px;
   }
+
+  .hero p {
+    font-size: 16px;
+  }
+
   .hero-buttons {
-      flex-wrap: wrap;
-      justify-content: center;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+
+  .TopCategory {
+    bottom: 50px;
   }
 }
 
 @media screen and (max-width: 480px) {
+  .hero {
+    height: 350px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    align-items: center;
+  }
+
   .hero h1 {
-      font-size: 36px;
+    font-size: 38px;
   }
+
   .hero p {
-      font-size: 16px;
+    font-size: 15px;
   }
+
   .hero-buttons {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    width: 100%;
+    justify-content: left;
   }
+
   .hero-buttons .btn {
-      width: 100%;
+    width: 90%;
+    max-width: 280px;
+    padding: 14px;
+    font-size: 14px;
   }
+
+  .TopCategory {
+    bottom: 30px;
+    left: 45%;
+  }
+}
+
+/*--------------- Card Carousel starts here --------------------*/
+.home-features {
+  background-color: #f1f7fa;
 }
 
 .card-carousel {
   overflow: hidden;
   padding: 40px;
   position: relative;
-  width: 1050px;
+  width: 1275px;
   margin-inline: auto;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -118,47 +195,111 @@
 .slider {
   display: flex;
   width: 100%;
-  overflow: hidden;
-  padding-right: 40px;
-}
-
-.slide-track {
-  display: flex;
   gap: 15px;
-  width: max-content;
-  animation: slideLeft 60s linear infinite;
-}
-
-.slide-track .card {
-  flex: 0 0 250px;
-}
-
-@keyframes slideLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-265px * 6)); } 
+  transition: transform 1s ease-in-out;
 }
 
 .card {
-  flex: 0 0 250px;
+  flex: 0 0 226px;
   height: 150px;
-  background-image: url('../Assets/Background.jpg');
+  background-image: url('../Assets/logistic-cards.avif');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   color: white;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 0 5px rgba(255, 0, 0, 0.5), 3px 0 5px rgba(255, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transform: translateX(0);
+  animation: slideLeft 1s ease-in-out;
 }
 
-@keyframes smoothStep {
-  0%, 100% { transform: translateX(0); }
-  10% { transform: translateX(-265px); }
+@keyframes slideLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
-.slide-track {
-  animation: smoothStep 60s linear infinite;
+.card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: top 0.5s ease-in-out;
 }
 
-/* Responsive Adjustments */
+.card:hover::before {
+  top: 0;
+}
+
+.card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.card-content .icon {
+  font-size: 40px;
+  color: yellow;
+  margin-bottom: 20px;
+  transition: color 0.5s;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  transition: color 0.5s;
+}
+
+.card:hover .icon {
+  color: red;
+}
+
+.card:hover h3 {
+  color: red;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-120%);
+    opacity: 0;
+  }
+}
+
+@keyframes shiftLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-226px);
+  }
+}
+
+.exiting {
+  animation: slideOut 0.9s ease-in-out forwards;
+}
+
+.shift-left {
+  animation: shiftLeft 0.9s ease-in-out forwards;
+}
+
 @media screen and (max-width: 1024px) {
   .card-carousel {
     width: 90%;
@@ -170,14 +311,13 @@
     width: 100%;
     padding: 20px;
   }
-  .slide-track {
-    animation: none; /* Stop auto-animation on small screens */
+  .slider {
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }
-  .slide-track .card {
-    flex: 0 0 90%;
+  .slider .card {
+    flex: 0 0 48%; 
     scroll-snap-align: center;
     margin-right: 10px;
   }
@@ -186,10 +326,14 @@
 @media screen and (max-width: 480px) {
   .card-carousel {
     padding: 15px;
+    width: 430px;
+    top: 0;
   }
-  .slide-track .card {
-    flex: 0 0 85%;
-  }
+  .slider .card {
+    flex: 0 0 45%;  
 }
 
-
+.card{
+  height:130px;
+}
+}
