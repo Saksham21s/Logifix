@@ -190,12 +190,6 @@
   top: -100px;
 }
 
-.owl-carousel {
-  display: flex;
-  gap: 15px;
-  width: 100%;
-}
-
 
 /* Individual Card Styling */
 .card {

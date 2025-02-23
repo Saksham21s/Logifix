@@ -207,19 +207,19 @@ const HeroSection = () => {
         <section className="card-carousel">
           <Swiper
             modules={[Autoplay, Pagination]}
-            spaceBetween={15}
+            spaceBetween={30}
             slidesPerView={4}
             loop={true}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{
               clickable: true,
-              el: '.custom-pagination',
+              el: '.gallery-pagination',
             }}
             breakpoints={{
-              0: { slidesPerView: 2 },
-              600: { slidesPerView: 2 },
-              1000: { slidesPerView: 3 },
-              1200: { slidesPerView: 4 },
+              0: { slidesPerView: 1, spaceBetween: 20 }, 
+              600: { slidesPerView: 2, spaceBetween: 20 },
+              1000: { slidesPerView: 3, spaceBetween: 25 },
+              1200: { slidesPerView: 4, spaceBetween: 30 },
             }}
           >
             {cards.map((card) => (
@@ -233,7 +233,7 @@ const HeroSection = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="custom-pagination"></div>
+          <div className="gallery-pagination"></div>
         </section>
 
         {/* video  section starts here */}
