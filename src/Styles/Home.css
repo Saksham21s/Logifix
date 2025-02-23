@@ -196,6 +196,7 @@
   width: 100%;
 }
 
+
 /* Individual Card Styling */
 .card {
   width: 226px;
@@ -215,6 +216,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  cursor:grab;
 }
 
 /* Hover Effect */
@@ -1537,7 +1539,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-inline: 80px;
+  margin-inline: 150px;
 }
 
 .logo-item {
@@ -1672,8 +1674,6 @@
 .blog-item-title:hover {
   color:#e74c3c;
 }
-
-
 
 .blog-read-more {
   color: #161414;
