@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import OwlCarousel from "react-owl-carousel3";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "../Styles/Home.css";
-import { FaArrowRight, FaTruck, FaBox, FaGlobe, FaHeadset, FaClock, FaShip, FaPlane, FaShippingFast, FaPlay, FaWarehouse, FaGlobeAmericas,FaCheck } from "react-icons/fa";
+import { FaArrowRight, FaTruck, FaBox, FaGlobe, FaHeadset, FaClock, FaShip, FaPlane, FaShippingFast, FaPlay, FaWarehouse, FaGlobeAmericas,FaCheck,FaStar,FaQuoteRight , FaUser, FaComment} from "react-icons/fa";
 import TopCategory from "../Assets/top-categories.png";
 import Navbar from "./HomeNavbar";
 import ShipImg from "../Assets/home-ship.jpg";
@@ -19,6 +20,18 @@ import Logistictruck from '../Assets/logistic-crane.avif';
 import Logisticcrane from '../Assets/logistic-crane.avif';
 import Logisticcard from '../Assets/logistic-crane.avif';
 import Plancontainer from '../Assets/plan-container.jpg';
+import kevinImage from '../Assets/testimonial-kevin.jpg';
+import markImage from '../Assets/testimonial-mark.webp';
+import logo1 from '../Assets/companies-logo/logo1.png'; 
+import logo1Hover from '../Assets/companies-logo/logo11.png'; 
+import logo2 from '../Assets/companies-logo/logo2.png'; 
+import logo2Hover from '../Assets/companies-logo/logo22.png'; 
+import logo3 from '../Assets/companies-logo/logo3.png'; 
+import logo3Hover from '../Assets/companies-logo/logo33.png'; 
+import logo4 from '../Assets/companies-logo/logo4.png'; 
+import logo4Hover from '../Assets/companies-logo/logo44.png'; 
+import logo5 from '../Assets/companies-logo/logo5.png'; 
+import logo5Hover from '../Assets/companies-logo/logo55.png'; 
 
 
 const HeroSection = () => {
@@ -86,6 +99,27 @@ const HeroSection = () => {
     },
   ];
 
+  const blogs = [
+    {
+        image: Logisticsea,
+        date: '23 February, 2025',
+        title: 'We careful handling the valuable goods',
+        content: 'Read Full Article →',
+    },
+    {
+        image: otherImage,
+        date: '25 January, 2025',
+        title: 'Why supply chain visibility so important?',
+        content: 'Read Full Article →',
+    },
+    {
+        image: trainImage,
+        date: '25 January, 2025',
+        title: 'Calculate volume weight for air freight',
+        content: 'Read Full Article →',
+    },
+];
+
 
   const galleryCards = [
     { id: 1, image: Logisticsea, title: 'Special Transport' },
@@ -121,6 +155,14 @@ const HeroSection = () => {
       1200: { items: 4 },
     },
   };
+
+  const logos = [
+    { normal: logo1, hover: logo1Hover },
+    { normal: logo2, hover: logo2Hover },
+    { normal: logo3, hover: logo3Hover },
+    { normal: logo4, hover: logo4Hover },
+    { normal: logo5, hover: logo5Hover },
+];
 
   const AnimatedAirplaneInfo = () => {
     const airplaneInfoRef = useRef(null);
@@ -246,7 +288,7 @@ const HeroSection = () => {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID?autoplay=1"
+            src="https://www.youtube.com/embed/KEFt2quibkg?si=4PTCtaAbleWpyghd" 
             title="YouTube video player"
             allow="autoplay; encrypted-media"
             allowFullScreen
@@ -414,6 +456,235 @@ const HeroSection = () => {
       </section>
 
       {/* Testimonial section starts here */}
+      <section className="home-testimonial">
+      <div className="testimonial-container">
+        <div className="testimonial-header">
+        <span className="red-slash">/</span> TESTIMONIAL <span className="red-slash">/</span>
+          <h2 className="testimonial-title">Why people love us <br/>over others</h2>
+        </div>
+        <div className="testimonial-content">
+          <div className="testimonial-wrapper">
+            <div className="testimonial-item">
+              <div className="testimonial-profile">
+                <div className="profile-image">
+                  <img src={kevinImage} alt="Kevin Copper" />
+                </div>
+                <div className="profile-details">
+                  <h3 className="profile-name">Kevin Copper</h3>
+                  <p className="profile-position">CEO, Logifix</p>
+                </div>
+              </div>
+              <div className="testimonial-quote">
+              <i><FaQuoteRight className="quote-icon" /></i>
+              </div>
+            </div>
+            <div className="testimonial-text">
+              <h3 className="testimonial-heading">Awesome Work</h3>
+              <div className="testimonial-stars">
+                {[...Array(5)].map((_, index) => (
+                  <FaStar key={index} className="star" />
+                ))}
+              </div>
+              <p className="testimonial-paragraph">
+                To get started with us, please go over all of our internet plans and other plans to let our operators know which one works for you.
+              </p>
+            </div>
+          </div>
+          <div className="testimonial-wrapper">
+            <div className="testimonial-item">
+              <div className="testimonial-profile">
+                <div className="profile-image">
+                  <img src={markImage} alt="Mark Wood" />
+                </div>
+                <div className="profile-details">
+                  <h3 className="profile-name">Mark Wood</h3>
+                  <p className="profile-position">CEO, Logifix</p>
+                </div>
+              </div>
+              <div className="testimonial-quote">
+               <i><FaQuoteRight className="quote-icon" /></i>
+              </div>
+            </div>
+            <div className="testimonial-text">
+              <h3 className="testimonial-heading">Great Service</h3>
+              <div className="testimonial-stars">
+                {[...Array(5)].map((_, index) => (
+                  <FaStar key={index} className="star" />
+                ))}
+              </div>
+              <p className="testimonial-paragraph">
+                To get started with us, please go over all of our internet plans and other plans to let our operators know which one works for you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* contact us section starts here */}
+    <section className="contact-us">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-6 request-quote-section">
+            <div className="request-quote-content">
+              <h2>Request A Quote</h2>
+              <form>
+                <div className="mb-3">
+                  <input type="text" className="form-control" placeholder="Full Name" />
+                </div>
+                <div className="mb-3">
+                  <input type="text" className="form-control" placeholder="Phone" />
+                </div>
+                <div className="mb-3">
+                  <input type="email" className="form-control" placeholder="Email" />
+                </div>
+                <div className="row">
+                  <div className="col-md-6 mb-3">
+                    <input type="text" className="form-control" placeholder="Departure" />
+                  </div>
+                  <div className="col-md-6 mb-3">
+                    <input type="text" className="form-control" placeholder="Deliver" />
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-md-6 mb-3">
+                    <input type="text" className="form-control" placeholder="Height" />
+                  </div>
+                  <div className="col-md-6 mb-3">
+                    <input type="text" className="form-control" placeholder="Weight" />
+                  </div>
+                </div>
+                <div className="mb-3">
+                  <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="checkbox" id="express" />
+                    <label className="form-check-label" htmlFor="express">Express</label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="checkbox" id="regular" />
+                    <label className="form-check-label" htmlFor="regular">Regular</label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="checkbox" id="insurance" />
+                    <label className="form-check-label" htmlFor="insurance">Insurance</label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input className="form-check-input" type="checkbox" id="fragile" />
+                    <label className="form-check-label" htmlFor="fragile">Fragile</label>
+                  </div>
+                </div>
+                <button type="submit" className="btn submit-request">Submit request →</button>
+              </form>
+            </div>
+          </div>
+          <div className="col-md-6 frequently-asked-section">
+            <div className="frequently-asked-content">
+              <h3>Frequently Asked</h3>
+              <div className="accordion" id="faqAccordion">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingOne">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                      Reason for choose us?
+                    </button>
+                  </h2>
+                  <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body">
+                      Logifix Internet is providing one of the fastest broadband internet and network solutions.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingTwo">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Can i get refund?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body">
+                      Logifix Internet is providing one of the fastest broadband internet and network solutions.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingThree">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      How can i get info?
+                    </button>
+                  </h2>
+                  <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body">
+                      Logifix Internet is providing one of the fastest broadband internet and network solutions.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingFour">
+                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      How i make contact?
+                    </button>
+                  </h2>
+                  <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                    <div className="accordion-body">
+                      Logifix Internet is providing one of the fastest broadband internet and network solutions.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* logo div with hover effect starts here  */}
+    <section className="logos-section">
+            <div className="logos-container">
+                {logos.map((logo, index) => (
+                    <div key={index} className="logo-item">
+                        <img
+                            src={logo.normal}
+                            alt={`Logo ${index + 1}`}
+                            className="logo-normal"
+                        />
+                        <img
+                            src={logo.hover}
+                            alt={`Logo ${index + 1} Hover`}
+                            className="logo-hover"
+                        />
+                    </div>
+                ))}
+            </div>
+        </section>
+
+        {/* Blogs section starts here*/ }
+        <section className="blog-section">
+            <div className="blog-container">
+                <div className="blog-header">
+                <span className="red-slash">/</span> TESTIMONIAL <span className="red-slash">/</span>
+                    <h2 className="blog-title">Insight From the latest <br/> News & Blog</h2>
+                </div>
+                <div className="blog-grid">
+                    {blogs.map((blog, index) => (
+                        <div key={index} className="blog-item">
+                            <div className="blog-image">
+                                <img src={blog.image} alt={`Blog ${index + 1}`} />
+                                <div className="blog-date">
+                                    <span>25</span>
+                                    <span className="blog-date-black">{blog.date.split(' ')[1]}, {blog.date.split(' ')[2]}</span>
+                                </div>
+                            </div>
+                            <div className="blog-content">
+                            <div className="blog-meta">
+                                    <span><FaUser style={{ marginRight: '5px' }} /> Admin</span>
+                                    <span><FaComment style={{ marginRight: '5px'}} /> Comments</span>
+                                </div>
+                                <h3 className="blog-item-title">{blog.title}</h3>
+                                <div className="blog-read-more">{blog.content}</div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
     </>
   );
 };
