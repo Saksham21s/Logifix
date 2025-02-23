@@ -412,6 +412,8 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
+
+      {/* Testimonial section starts here */}
     </>
   );
 };
