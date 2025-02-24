@@ -4,63 +4,74 @@
     color: white;
     font-size: 14px;
     height: 40px;
-  }
-  
-  .top-navbar .container {
     width: 100%;
-    margin: 0;
-  }
-  
-  .top-navbar-content {
+}
+
+.top-navbar .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-  }
-  
-  .top-navbar-left {
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Left Section */
+.top-navbar-left {
     display: flex;
     gap: 20px;
-    justify-content: flex-start;
-  }
-  
-  .top-navbar-left span {
+}
+
+.top-navbar-left span {
     display: flex;
     align-items: center;
     gap: 8px;
-  }
-  
-  .top-navbar-left i {
+}
+
+.top-navbar-left i {
     font-size: 16px;
     color: #e62f1a;
-  }
+}
 
-  
-  .top-navbar-right .social-icons {
+.top-navbar-right {
     display: flex;
-    margin-top: 0;
-  }
-  
-  .top-navbar-right .social-icons a {
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 40px;
+}
+
+.top-navbar-right .social-icons {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.top-navbar-right .social-icons a {
     color: white;
     font-size: 48px;
     transition: color 0.3s ease;
     background-color: #db2f1b;
     height: 40px;
     width: 40px;
-    margin-block: 0;
     display: grid;
     place-items: center;
-  }
-  
-  .top-navbar-right .social-icons a:hover {
-    color: #ffffff;
-  }
-  
-  .top-navbar-right .social-icons i {
-    font-size: 18px;
-  }
+}
 
-/* Main Navbar */
+.top-navbar-right .social-icons a:hover {
+    color: #ffffff;
+}
+
+.top-navbar-right .social-icons i {
+    font-size: 18px;
+}
+
+/*------------ Main Navbar -----------------*/
+.middle-navbar {
+    position: relative;
+}
+
 .middle-navbar .container {
     display: flex;
     justify-content: space-between; 
@@ -109,7 +120,10 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-left: auto; 
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .icon-circle {
@@ -117,20 +131,20 @@
     flex-direction: row;
     align-items: center;
     text-align: center;
+}
 
-    i{
-        background-color: rgb(15, 15, 15);
-        color: white;
-        border: 2px solid  rgb(244, 240, 240);
-        width: 60px;
-        height: 60px;
-        border-radius: 50%; 
-        font-size: 34px;
-        display: grid;
-        place-items: center;
-        position: relative;
-        left: 40px;
-    }
+.icon-circle i {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    border: 2px solid rgb(244, 240, 240);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; 
+    font-size: 34px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    left: 40px;
 }
 
 .text-container {
@@ -145,7 +159,7 @@
     font-weight: 600;
 }
 
-.icon{
+.icon {
     display: flex;
     flex-direction: row;
     margin-left: 20px;
@@ -153,6 +167,59 @@
     font-size: 24px;
     cursor: pointer;
 }
+
+
+.middle-navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.middle-navbar .nav-item:hover > .dropdown-menu {
+    display: block;
+}
+
+.middle-navbar .dropdown-submenu {
+    position: relative;
+}
+
+.middle-navbar .dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+}
+
+.middle-navbar .dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+.middle-navbar .dropdown-menu .dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+    position: relative;
+    white-space: nowrap;
+}
+
+.middle-navbar .dropdown-menu .dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
 
 @media screen and (max-width: 768px) {
     .top-navbar {

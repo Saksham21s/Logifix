@@ -2,21 +2,15 @@ body {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   line-height: 1.875em;
-  color: #555555;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Lato", sans-serif;
-  color: var(--theme-color2);
-}
-
-a {
-  color: var(--theme-color-dark);
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-a:hover {
-  color: var(--theme-color-dark);
 }
 
 /*--------------------All Page common top content section start here -----------------------------------*/
@@ -55,4 +49,263 @@ a:hover {
 }
 .page-title-container .page-title-content p .breadcrumb-active {
   color: rgb(255, 255, 255);
+}
+
+/*--------------------All Page common top content section end here -----------------------------------*/
+/*--------------------About Us Page  start here -----------------------------------*/
+.transport-section {
+  background: #f8f8f8;
+  padding: 80px 20px;
+}
+.transport-section .content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+}
+.transport-section .content-wrapper .image-column {
+  position: relative;
+}
+.transport-section .content-wrapper .image-column .about-main-image {
+  width: 440px;
+  height: 515px;
+}
+.transport-section .content-wrapper .image-column .about-image-overlap {
+  position: absolute;
+  bottom: 0;
+  left: -65px;
+  width: 50%;
+}
+.transport-section .content-wrapper .text-column {
+  width: 50%;
+  text-align: left;
+  padding-left: 40px;
+}
+.transport-section .content-wrapper .text-column h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+.transport-section .content-wrapper .text-column h4 {
+  color: red;
+}
+.transport-section .content-wrapper .text-column p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.transport-section .content-wrapper .text-column ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+.transport-section .content-wrapper .text-column ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.transport-section .content-wrapper .text-column ul li i {
+  color: red;
+  margin-right: 10px;
+}
+.transport-section .content-wrapper .text-column .hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+.transport-section .content-wrapper .text-column .hero-buttons .explore-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 14px 28px;
+  position: relative;
+  color: white;
+  background: #ff2600;
+  border: none;
+  overflow: hidden;
+  transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+}
+.transport-section .content-wrapper .text-column .hero-buttons .explore-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+}
+.transport-section .content-wrapper .text-column .hero-buttons .explore-btn:hover::before {
+  left: 0;
+}
+.transport-section .content-wrapper .text-column .hero-buttons .explore-btn:hover {
+  background: rgb(0, 0, 0);
+  border: 1px solid #ff2600;
+  color: white;
+}
+.transport-section .content-wrapper .text-column .hero-buttons .explore-btn:hover .icon {
+  color: white;
+}
+.transport-section .content-wrapper .text-column .hero-buttons .explore-btn .icon {
+  font-size: 18px;
+}
+@media (max-width: 1024px) {
+  .transport-section .content-wrapper .image-column .about-main-image {
+    width: 400px;
+    height: auto;
+  }
+  .transport-section .content-wrapper .image-column .about-image-overlap {
+    left: -50px;
+  }
+  .transport-section .content-wrapper .text-column {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+  .transport-section .content-wrapper .text-column h2 {
+    font-size: 2.2rem;
+  }
+  .transport-section .content-wrapper .text-column p {
+    font-size: 1rem;
+  }
+  .transport-section .content-wrapper .text-column ul {
+    justify-content: center;
+  }
+  .transport-section .content-wrapper .text-column .hero-buttons {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .transport-section .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .transport-section .content-wrapper .image-column .about-main-image {
+    width: 320px;
+  }
+  .transport-section .content-wrapper .image-column .about-image-overlap {
+    left: -30px;
+    width: 40%;
+  }
+  .transport-section .content-wrapper .text-column {
+    width: 100%;
+  }
+  .transport-section .content-wrapper .text-column h2 {
+    font-size: 2rem;
+  }
+  .transport-section .content-wrapper .text-column p {
+    font-size: 0.95rem;
+  }
+}
+@media (max-width: 480px) {
+  .transport-section .content-wrapper .image-column .about-main-image {
+    width: 100%;
+    height: auto;
+  }
+  .transport-section .content-wrapper .image-column .about-image-overlap {
+    display: none;
+  }
+  .transport-section .content-wrapper .text-column h2 {
+    font-size: 1.8rem;
+  }
+  .transport-section .content-wrapper .text-column p {
+    font-size: 0.9rem;
+  }
+}
+.transport-section .stats-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  flex-wrap: wrap;
+  width: 815px;
+  max-width: 100%;
+  margin-top: 60px;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 16px 12px rgba(0, 0, 0, 0.1);
+}
+.transport-section .stats-wrapper .stat-item {
+  width: 210px;
+  margin: 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+.transport-section .stats-wrapper .stat-item i {
+  color: red;
+  font-size: 2rem;
+  margin-right: 10px;
+}
+.transport-section .stats-wrapper .stat-item .stat-text {
+  text-align: left;
+}
+.transport-section .stats-wrapper .stat-item .stat-text h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+.transport-section .stats-wrapper .stat-item .stat-text p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0;
+}
+@media (max-width: 1024px) {
+  .transport-section .stats-wrapper {
+    width: 90%;
+    padding: 20px;
+  }
+  .transport-section .stats-wrapper .stat-item {
+    width: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .transport-section .stats-wrapper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+  }
+  .transport-section .stats-wrapper .stat-item {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .transport-section .stats-wrapper .stat-item i {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .transport-section .stats-wrapper .stat-item .stat-text {
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .transport-section .stats-wrapper {
+    padding: 15px;
+    margin-top: 40px;
+  }
+  .transport-section .stats-wrapper .stat-item {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .transport-section .stats-wrapper .stat-item i {
+    font-size: 1.8rem;
+  }
+  .transport-section .stats-wrapper .stat-item .stat-text h3 {
+    font-size: 1.5rem;
+  }
+  .transport-section .stats-wrapper .stat-item .stat-text p {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=style.css.map */

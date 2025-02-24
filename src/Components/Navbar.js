@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../Styles/Navbar.css";
+import "../Styles/HomeNavbar.css";
 import { FaMapMarkerAlt, FaBell, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaHeadphones, FaSearch, FaShoppingCart, FaClock, FaPhoneAlt, FaTimes } from 'react-icons/fa';
 import Logo from "../Assets/logo-white.png";
 import LogoWhite from "../Assets/logo-white.png";
@@ -67,59 +68,69 @@ const Navbar = () => {
 
                     {/* Middle - Navigation */}
                     <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/" onClick={closeNavbar}>
-                                HOME
-                            </Link>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <Link className="nav-link" to="#" onClick={() => toggleDropdown("pages")}>
-                                PAGES
-                            </Link>
-                            <ul className={`dropdown-menu ${activeDropdown === "pages" ? "show" : ""}`}>
-                                <li><Link className="dropdown-item" to="/about" onClick={closeNavbar}>About</Link></li>
-                                <li className="dropdown-submenu">
-                                    <Link className="dropdown-item" to="#" onClick={() => toggleDropdown("projects")}>
-                                        Projects <i className="fas fa-chevron-right"></i>
-                                    </Link>
-                                    <ul className={`dropdown-menu ${activeDropdown === "projects" ? "show" : ""}`}>
-                                        <li><Link className="dropdown-item" to="/project-list" onClick={closeNavbar}>Project List</Link></li>
-                                        <li><Link className="dropdown-item" to="/project-details" onClick={closeNavbar}>Project Details</Link></li>
-                                    </ul>
-                                </li>
-                                <li><Link className="dropdown-item" to="/testinomial" onClick={closeNavbar}>Testimonial</Link></li>
-                                <li><Link className="dropdown-item" to="/pricing" onClick={closeNavbar}>Pricing</Link></li>
-                            </ul>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <Link className="nav-link" to="#" onClick={() => toggleDropdown("services")}>
-                                SERVICES
-                            </Link>
-                            <ul className={`dropdown-menu ${activeDropdown === "services" ? "show" : ""}`}>
-                                <li><Link className="dropdown-item" to="/service-details" onClick={closeNavbar}>Details</Link></li>
-                            </ul>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <Link className="nav-link" to="#" onClick={() => toggleDropdown("news")}>
-                                NEWS
-                            </Link>
-                            <ul className={`dropdown-menu ${activeDropdown === "news" ? "show" : ""}`}>
-                                <li><Link className="dropdown-item" to="/news-grid" onClick={closeNavbar}>Grid</Link></li>
-                                <li><Link className="dropdown-item" to="/news-details" onClick={closeNavbar}>News Details</Link></li>
-                            </ul>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/contact" onClick={closeNavbar}>
-                                CONTACT
-                            </Link>
-                        </li>
-                    </ul>
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/">HOME</Link>
+                    </li>
+
+                    <li className="nav-item dropdown">
+                        <Link className="nav-link" to="#">PAGES <i className="fas fa-plus"></i></Link>
+                        <ul className="dropdown-menu">
+                            <li><Link className="dropdown-item" to="/about">About</Link></li>
+                            <li className="dropdown-submenu">
+                                <Link className="dropdown-item" to="#">Projects <i className="fas fa-chevron-right"></i></Link>
+                                <ul className="dropdown-menu">
+                                    <li><Link className="dropdown-item" to="/project-list">Project List</Link></li>
+                                    <li><Link className="dropdown-item" to="/project-details">Project Details</Link></li>
+                                </ul>
+                            </li>
+                            <li className="dropdown-submenu">
+                                <Link className="dropdown-item" to="#">Team <i className="fas fa-chevron-right"></i></Link>
+                                <ul className="dropdown-menu">
+                                    <li><Link className="dropdown-item" to="/team-list">Team List</Link></li>
+                                    <li><Link className="dropdown-item" to="/team-details">Team Details</Link></li>
+                                </ul>
+                            </li>
+                            <li className="dropdown-submenu">
+                                <Link className="dropdown-item" to="#">Shop <i className="fas fa-chevron-right"></i></Link>
+                                <ul className="dropdown-menu">
+                                    <li><Link className="dropdown-item" to="/products">Products</Link></li>
+                                    <li><Link className="dropdown-item" to="/products-with-sidebar">Products with Sidebar</Link></li>
+                                    <li><Link className="dropdown-item" to="/product-details">Product Details</Link></li>
+                                    <li><Link className="dropdown-item" to="/cart">Cart</Link></li>
+                                    <li><Link className="dropdown-item" to="/checkout">Checkout</Link></li>
+                                </ul>
+                            </li>
+                            <li><Link className="dropdown-item" to="/testinomial">Testimonial</Link></li>
+                            <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
+                        </ul>
+                    </li>
+
+                    <li className="nav-item dropdown">
+                        <Link className="nav-link" to="#">SERVICES <i className="fas fa-plus"></i></Link>
+                        <ul className="dropdown-menu">
+                            <li><Link className="dropdown-item" to="/service-details">Service Details</Link></li>
+                            <li><Link className="dropdown-item" to="/testinomial">Testimonials</Link></li>
+                        </ul>
+                    </li>
+
+                    <li className="nav-item dropdown">
+                        <Link className="nav-link" to="#">NEWS <i className="fas fa-plus"></i></Link>
+                        <ul className="dropdown-menu">
+                            <li><Link className="dropdown-item" to="/news-grid">News Grid</Link></li>
+                            <li><Link className="dropdown-item" to="/news-details">News Details</Link></li>
+                        </ul>
+                    </li>
+
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/contact">CONTACT</Link>
+                    </li>
+                </ul>
                     {/* Right - Icons */}
                     <div className="navbar-icons">
                         <div className="icon-circle">
                             <i><FaHeadphones /></i>
                             <div className="text-container">
-                                <span style={{color: "#e74c3c"}}>Call Us Now</span>
+                                <span style={{ color: "#e74c3c" }}>Call Us Now</span>
                                 <span>+91 123 456 789</span>
                             </div>
                         </div>
