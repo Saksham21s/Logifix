@@ -1,18 +1,33 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "../Styles/HomeNavbar.css";
-import Logo from "../Assets/logo.png";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import "../Styles/Navbar.css";
+import { FaMapMarkerAlt, FaBell, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaHeadphones, FaSearch, FaShoppingCart, FaClock, FaPhoneAlt, FaTimes } from 'react-icons/fa';
+import Logo from "../Assets/logo-white.png";
 import LogoWhite from "../Assets/logo-white.png";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { FaArrowRight, FaTimes, FaPhoneAlt, FaEnvelope,FaClock } from "react-icons/fa";
 
 const Navbar = () => {
+    const [scrolled, setScrolled] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
-    const [scrolled, setScrolled] = useState(false);
 
-    const toggleDropdown = (menu) => {
-        setActiveDropdown(activeDropdown === menu ? null : menu);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const toggleDropdown = (dropdownName) => {
+        setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
     };
 
     const closeNavbar = () => {
@@ -20,100 +35,105 @@ const Navbar = () => {
         setActiveDropdown(null);
     };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 100);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-
-
     return (
-        <>
-            {/* Top Navbar */}
-            <nav className={`navbar navbar-expand-lg navbar-top ${scrolled ? "hidden" : ""}`}>
+        <div>
+            <div className="top-navbar">
                 <div className="container">
-                    <Link className="navbar-brand" to="/" onClick={closeNavbar}>
-                        <img src={Logo} alt="Logifix" className="logo" />
-                    </Link>
-
-                    <button className="navbar-toggler" type="button" onClick={() => setIsOpen(!isOpen)}>
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div className={`offcanvas offcanvas-end ${isOpen ? "show" : ""}`} tabIndex="-1" id="offcanvasNavbar">
-                        <div className="offcanvas-header">
-                            <h5 className="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                            <button type="button" className="btn-close" onClick={() => setIsOpen(false)}>
-                                <FaTimes />
-                            </button>
+                    <div className="top-navbar-content">
+                        <div className="top-navbar-left">
+                            <span className="address"><i><FaMapMarkerAlt /></i> 1901 Broadway, New York</span>
+                            <span className="hours"><i><FaBell /></i> Mon-Fri: 09.00am-10.00 pm</span>
+                            <span className="email"><i><FaEnvelope /></i> info_ourmail@Logifix.com</span>
                         </div>
-                        <div className="offcanvas-body">
-                            <ul className="navbar-nav">
-                                <li className="nav-item">
-                                    <Link className="nav-link" to="/" onClick={closeNavbar}>HOME</Link>
-                                </li>
-
-                                <li className="nav-item dropdown">
-                                    <Link className="nav-link" to="#" onClick={() => toggleDropdown("pages")}>PAGES</Link>
-                                    <ul className={`dropdown-menu ${activeDropdown === "pages" ? "show" : ""}`}>
-                                        <li><Link className="dropdown-item" to="/about" onClick={closeNavbar}>About</Link></li>
-                                        <li className="dropdown-submenu">
-                                            <Link className="dropdown-item" to="#" onClick={() => toggleDropdown("projects")}>Projects <i className="fas fa-chevron-right"></i></Link>
-                                            <ul className={`dropdown-menu ${activeDropdown === "projects" ? "show" : ""}`}>
-                                                <li><Link className="dropdown-item" to="/project-list" onClick={closeNavbar}>Project List</Link></li>
-                                                <li><Link className="dropdown-item" to="/project-details" onClick={closeNavbar}>Project Details</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className="dropdown-submenu">
-                                            <Link className="dropdown-item" to="#" onClick={() => toggleDropdown("team")}>Team <i className="fas fa-chevron-right"></i></Link>
-                                            <ul className={`dropdown-menu ${activeDropdown === "team" ? "show" : ""}`}>
-                                                <li><Link className="dropdown-item" to="/team-list" onClick={closeNavbar}>Team List</Link></li>
-                                                <li><Link className="dropdown-item" to="/team-details" onClick={closeNavbar}>Team Details</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li className="dropdown-submenu">
-                                            <Link className="dropdown-item" to="#" onClick={() => toggleDropdown("shop")}>Shop <i className="fas fa-chevron-right"></i></Link>
-                                            <ul className={`dropdown-menu ${activeDropdown === "shop" ? "show" : ""}`}>
-                                                <li><Link className="dropdown-item" to="/products" onClick={closeNavbar}>Products</Link></li>
-                                                <li><Link className="dropdown-item" to="/products-with-sidebar" onClick={closeNavbar}>Products with sidebar</Link></li>
-                                                <li><Link className="dropdown-item" to="/product-details" onClick={closeNavbar}>Products details</Link></li>
-                                                <li><Link className="dropdown-item" to="/cart" onClick={closeNavbar}>Cart</Link></li>
-                                                <li><Link className="dropdown-item" to="/checkout" onClick={closeNavbar}>Checkout</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li><Link className="dropdown-item" to="/testinomial" onClick={closeNavbar}>Testinomial</Link></li>
-                                        <li><Link className="dropdown-item" to="/pricing" onClick={closeNavbar}>Pricing</Link></li>
-                                    </ul>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <Link className="nav-link" to="#" onClick={() => toggleDropdown("services")}>SERVICES</Link>
-                                    <ul className={`dropdown-menu ${activeDropdown === "services" ? "show" : ""}`}>
-                                        <li><Link className="dropdown-item" to="/service-details" onClick={closeNavbar}>Details</Link></li>
-                                        <li><Link className="dropdown-item" to="/testinomial" onClick={closeNavbar}>Service details</Link></li>
-                                    </ul>
-                                </li>
-                                <li className="nav-item dropdown">
-                                    <Link className="nav-link" to="#" onClick={() => toggleDropdown("news")}>NEWS</Link>
-                                    <ul className={`dropdown-menu ${activeDropdown === "news" ? "show" : ""}`}>
-                                        <li><Link className="dropdown-item" to="/news-grid" onClick={closeNavbar}>Grid</Link></li>
-                                        <li><Link className="dropdown-item" to="/news-details" onClick={closeNavbar}>News Details</Link></li>
-                                    </ul>
-                                </li>
-                                <li className="nav-item"><Link className="nav-link" to="/contact" onClick={closeNavbar}>CONTACT</Link></li>
-                            </ul>
+                        <div className="top-navbar-right">
+                            <div className="social-icons">
+                                <a href="www.facebook.com" target="_blank" rel="noopener noreferrer"><i><FaFacebook /></i></a>
+                                <a href="www.x.com" target="_blank" rel="noopener noreferrer"><i><FaTwitter /></i></a>
+                                <a href="www.instagram.com" target="_blank" rel="noopener noreferrer"><i><FaInstagram /></i></a>
+                                <a href="www.facebook.com" target="_blank" rel="noopener noreferrer"><i><FaFacebook /></i></a>
+                            </div>
                         </div>
                     </div>
-                    <Link to="/cart" className="icon-link"><i className="fas fa-shopping-cart"></i></Link>
-                    <Link to="/search" className="icon-link"><i className="fas fa-search"></i></Link>
                 </div>
-                <Link to="/contacts">
-                    <div className="signup-btn"> <span>Sign Up &nbsp;</span> <FaArrowRight className="icon" /></div>
-                </Link>
-            </nav>
+            </div>
+            {/* Middle Navbar */}
+            <nav className="middle-navbar">
+                <div className="container">
+                    <div className="navbar-logo">
+                        <Link to="/">
+                            <img src={Logo} alt="Logo" />
+                        </Link>
+                    </div>
 
-            {/* Scroll Navbar */}
+                    {/* Middle - Navigation */}
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/" onClick={closeNavbar}>
+                                HOME
+                            </Link>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link" to="#" onClick={() => toggleDropdown("pages")}>
+                                PAGES
+                            </Link>
+                            <ul className={`dropdown-menu ${activeDropdown === "pages" ? "show" : ""}`}>
+                                <li><Link className="dropdown-item" to="/about" onClick={closeNavbar}>About</Link></li>
+                                <li className="dropdown-submenu">
+                                    <Link className="dropdown-item" to="#" onClick={() => toggleDropdown("projects")}>
+                                        Projects <i className="fas fa-chevron-right"></i>
+                                    </Link>
+                                    <ul className={`dropdown-menu ${activeDropdown === "projects" ? "show" : ""}`}>
+                                        <li><Link className="dropdown-item" to="/project-list" onClick={closeNavbar}>Project List</Link></li>
+                                        <li><Link className="dropdown-item" to="/project-details" onClick={closeNavbar}>Project Details</Link></li>
+                                    </ul>
+                                </li>
+                                <li><Link className="dropdown-item" to="/testinomial" onClick={closeNavbar}>Testimonial</Link></li>
+                                <li><Link className="dropdown-item" to="/pricing" onClick={closeNavbar}>Pricing</Link></li>
+                            </ul>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link" to="#" onClick={() => toggleDropdown("services")}>
+                                SERVICES
+                            </Link>
+                            <ul className={`dropdown-menu ${activeDropdown === "services" ? "show" : ""}`}>
+                                <li><Link className="dropdown-item" to="/service-details" onClick={closeNavbar}>Details</Link></li>
+                            </ul>
+                        </li>
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link" to="#" onClick={() => toggleDropdown("news")}>
+                                NEWS
+                            </Link>
+                            <ul className={`dropdown-menu ${activeDropdown === "news" ? "show" : ""}`}>
+                                <li><Link className="dropdown-item" to="/news-grid" onClick={closeNavbar}>Grid</Link></li>
+                                <li><Link className="dropdown-item" to="/news-details" onClick={closeNavbar}>News Details</Link></li>
+                            </ul>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/contact" onClick={closeNavbar}>
+                                CONTACT
+                            </Link>
+                        </li>
+                    </ul>
+                    {/* Right - Icons */}
+                    <div className="navbar-icons">
+                        <div className="icon-circle">
+                            <i><FaHeadphones /></i>
+                            <div className="text-container">
+                                <span style={{color: "#e74c3c"}}>Call Us Now</span>
+                                <span>+91 123 456 789</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="icon">
+                        <i>  <FaSearch /></i>
+                        <div className="icon">
+                            <i><FaShoppingCart /></i>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+            {/* Scroll Navbar  */}
             <nav className={`navbar navbar-expand-lg navbar-scroll ${scrolled ? "visible" : ""}`}>
                 <div className="container d-flex justify-content-between align-items-center">
                     <Link className="navbar-brand" to="/" onClick={closeNavbar}>
@@ -217,7 +237,7 @@ const Navbar = () => {
                     </div>
                 </div>
             </nav>
-        </>
+        </div>
     );
 };
 

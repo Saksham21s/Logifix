@@ -1,0 +1,76 @@
+$text-color: #555555;
+$headings-color: var(--theme-color2);
+$link-color: var(--theme-color-dark);
+$link-hover-color: var(--theme-color-dark);
+$text-font: "Nunito", sans-serif;
+$title-font: "Lato", sans-serif;
+$body-font-size: 16px;
+$body-line-height: 1.875em;
+
+body {
+  font-family: $text-font;
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font;
+  color: $headings-color;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+
+/*--------------------All Page common top content section start here -----------------------------------*/
+.page-title-container {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../../Assets/Page-title-bg.jpg");
+      background-size: cover;
+      background-position: center;
+      filter: brightness(50%); 
+      z-index: -1;
+    }
+  
+    .page-title-content {
+      h1 {
+        font-size: 4em; 
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 1.2em;
+  
+        .breadcrumb-inactive {
+          color: rgb(227, 18, 18);
+        }
+  
+        .breadcrumb-active {
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+  }
