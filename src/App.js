@@ -9,6 +9,10 @@ import ProjectList from "./Pages/Projects/ProjectList";
 import ProjectDetails from "./Pages/Projects/ProjectDetails";
 import TeamList from "./Pages/Team/TeamList";
 import TeamDetails from "./Pages/Team/TeamDetails";
+import Testinomial from "./Pages/Testinomial/Testinomial";
+import Pricing from "./Pages/Pricing/Pricing";
+import Details from "./Pages/Services/Details";
+import ServiceDetails from "./Pages/Services/ServiceDetails";
 
 const AppLayout = () => {
   const location = useLocation();
@@ -24,6 +28,10 @@ const AppLayout = () => {
         <Route path="/project-details" element={<ProjectDetails />} />
         <Route path="/team-list" element={<TeamList />} />
         <Route path="/team-details" element={<TeamDetails />} />
+        <Route path="/testinomial" element={<Testinomial />} />
+        <Route path="/pricing" element={<Pricing />} />
+        <Route path="/details" element={<Details />} />
+        <Route path="/service-details" element={<ServiceDetails />} />
         
       </Routes>
       <ScrollToTop />

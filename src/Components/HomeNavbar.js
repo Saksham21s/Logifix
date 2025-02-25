@@ -90,8 +90,8 @@ const Navbar = () => {
                                 <li className="nav-item dropdown">
                                     <Link className="nav-link" to="#" onClick={() => toggleDropdown("services")}>SERVICES</Link>
                                     <ul className={`dropdown-menu ${activeDropdown === "services" ? "show" : ""}`}>
-                                        <li><Link className="dropdown-item" to="/service-details" onClick={closeNavbar}>Details</Link></li>
-                                        <li><Link className="dropdown-item" to="/testinomial" onClick={closeNavbar}>Service details</Link></li>
+                                        <li><Link className="dropdown-item" to="/details" onClick={closeNavbar}>Details</Link></li>
+                                        <li><Link className="dropdown-item" to="/service-details" onClick={closeNavbar}>Service details</Link></li>
                                     </ul>
                                 </li>
                                 <li className="nav-item dropdown">
@@ -176,8 +176,8 @@ const Navbar = () => {
                                     <li className="nav-item dropdown">
                                         <Link className="nav-link" to="#" onClick={() => toggleDropdown("services")}>SERVICES</Link>
                                         <ul className={`dropdown-menu ${activeDropdown === "services" ? "show" : ""}`}>
-                                            <li><Link className="dropdown-item" to="/service-details" onClick={closeNavbar}>Details</Link></li>
-                                            <li><Link className="dropdown-item" to="/testinomial" onClick={closeNavbar}>Service details</Link></li>
+                                            <li><Link className="dropdown-item" to="/details" onClick={closeNavbar}>Details</Link></li>
+                                            <li><Link className="dropdown-item" to="/service-details" onClick={closeNavbar}>Service details</Link></li>
                                         </ul>
                                     </li>
                                     <li className="nav-item dropdown">

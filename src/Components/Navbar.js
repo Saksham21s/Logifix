@@ -68,63 +68,63 @@ const Navbar = () => {
 
                     {/* Middle - Navigation */}
                     <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/">HOME</Link>
-                    </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/">HOME</Link>
+                        </li>
 
-                    <li className="nav-item dropdown">
-                        <Link className="nav-link" to="#">PAGES <i className="fas fa-plus"></i></Link>
-                        <ul className="dropdown-menu">
-                            <li><Link className="dropdown-item" to="/about">About</Link></li>
-                            <li className="dropdown-submenu">
-                                <Link className="dropdown-item" to="#">Projects <i className="fas fa-chevron-right"></i></Link>
-                                <ul className="dropdown-menu">
-                                    <li><Link className="dropdown-item" to="/project-list">Project List</Link></li>
-                                    <li><Link className="dropdown-item" to="/project-details">Project Details</Link></li>
-                                </ul>
-                            </li>
-                            <li className="dropdown-submenu">
-                                <Link className="dropdown-item" to="#">Team <i className="fas fa-chevron-right"></i></Link>
-                                <ul className="dropdown-menu">
-                                    <li><Link className="dropdown-item" to="/team-list">Team List</Link></li>
-                                    <li><Link className="dropdown-item" to="/team-details">Team Details</Link></li>
-                                </ul>
-                            </li>
-                            <li className="dropdown-submenu">
-                                <Link className="dropdown-item" to="#">Shop <i className="fas fa-chevron-right"></i></Link>
-                                <ul className="dropdown-menu">
-                                    <li><Link className="dropdown-item" to="/products">Products</Link></li>
-                                    <li><Link className="dropdown-item" to="/products-with-sidebar">Products with Sidebar</Link></li>
-                                    <li><Link className="dropdown-item" to="/product-details">Product Details</Link></li>
-                                    <li><Link className="dropdown-item" to="/cart">Cart</Link></li>
-                                    <li><Link className="dropdown-item" to="/checkout">Checkout</Link></li>
-                                </ul>
-                            </li>
-                            <li><Link className="dropdown-item" to="/testinomial">Testimonial</Link></li>
-                            <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
-                        </ul>
-                    </li>
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link" to="#">PAGES <i className="fas fa-plus"></i></Link>
+                            <ul className="dropdown-menu">
+                                <li><Link className="dropdown-item" to="/about">About</Link></li>
+                                <li className="dropdown-submenu">
+                                    <Link className="dropdown-item" to="#">Projects <i className="fas fa-chevron-right"></i></Link>
+                                    <ul className="dropdown-menu">
+                                        <li><Link className="dropdown-item" to="/project-list">Project List</Link></li>
+                                        <li><Link className="dropdown-item" to="/project-details">Project Details</Link></li>
+                                    </ul>
+                                </li>
+                                <li className="dropdown-submenu">
+                                    <Link className="dropdown-item" to="#">Team <i className="fas fa-chevron-right"></i></Link>
+                                    <ul className="dropdown-menu">
+                                        <li><Link className="dropdown-item" to="/team-list">Team List</Link></li>
+                                        <li><Link className="dropdown-item" to="/team-details">Team Details</Link></li>
+                                    </ul>
+                                </li>
+                                <li className="dropdown-submenu">
+                                    <Link className="dropdown-item" to="#">Shop <i className="fas fa-chevron-right"></i></Link>
+                                    <ul className="dropdown-menu">
+                                        <li><Link className="dropdown-item" to="/products">Products</Link></li>
+                                        <li><Link className="dropdown-item" to="/products-with-sidebar">Products with Sidebar</Link></li>
+                                        <li><Link className="dropdown-item" to="/product-details">Product Details</Link></li>
+                                        <li><Link className="dropdown-item" to="/cart">Cart</Link></li>
+                                        <li><Link className="dropdown-item" to="/checkout">Checkout</Link></li>
+                                    </ul>
+                                </li>
+                                <li><Link className="dropdown-item" to="/testinomial">Testimonial</Link></li>
+                                <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
+                            </ul>
+                        </li>
 
-                    <li className="nav-item dropdown">
-                        <Link className="nav-link" to="#">SERVICES <i className="fas fa-plus"></i></Link>
-                        <ul className="dropdown-menu">
-                            <li><Link className="dropdown-item" to="/service-details">Service Details</Link></li>
-                            <li><Link className="dropdown-item" to="/testinomial">Testimonials</Link></li>
-                        </ul>
-                    </li>
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link" to="#">SERVICES <i className="fas fa-plus"></i></Link>
+                            <ul className="dropdown-menu">
+                                <li><Link className="dropdown-item" to="/details">Services</Link></li>
+                                <li><Link className="dropdown-item" to="/service-details">Service Details</Link></li>
+                            </ul>
+                        </li>
 
-                    <li className="nav-item dropdown">
-                        <Link className="nav-link" to="#">NEWS <i className="fas fa-plus"></i></Link>
-                        <ul className="dropdown-menu">
-                            <li><Link className="dropdown-item" to="/news-grid">News Grid</Link></li>
-                            <li><Link className="dropdown-item" to="/news-details">News Details</Link></li>
-                        </ul>
-                    </li>
+                        <li className="nav-item dropdown">
+                            <Link className="nav-link" to="#">NEWS <i className="fas fa-plus"></i></Link>
+                            <ul className="dropdown-menu">
+                                <li><Link className="dropdown-item" to="/news-grid">News Grid</Link></li>
+                                <li><Link className="dropdown-item" to="/news-details">News Details</Link></li>
+                            </ul>
+                        </li>
 
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/contact">CONTACT</Link>
-                    </li>
-                </ul>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/contact">CONTACT</Link>
+                        </li>
+                    </ul>
                     {/* Right - Icons */}
                     <div className="navbar-icons">
                         <div className="icon-circle">
@@ -207,8 +207,8 @@ const Navbar = () => {
                                     <li className="nav-item dropdown">
                                         <Link className="nav-link" to="#" onClick={() => toggleDropdown("services")}>SERVICES</Link>
                                         <ul className={`dropdown-menu ${activeDropdown === "services" ? "show" : ""}`}>
-                                            <li><Link className="dropdown-item" to="/service-details" onClick={closeNavbar}>Details</Link></li>
-                                            <li><Link className="dropdown-item" to="/testinomial" onClick={closeNavbar}>Service details</Link></li>
+                                            <li><Link className="dropdown-item" to="/details" onClick={closeNavbar}>Details</Link></li>
+                                            <li><Link className="dropdown-item" to="/service-details" onClick={closeNavbar}>Service details</Link></li>
                                         </ul>
                                     </li>
                                     <li className="nav-item dropdown">

@@ -29,7 +29,7 @@ const TeamDetails = () => {
 
   return (
     <div>
-      <PageTitle title="Team" />
+      <PageTitle title="Team Details" />
       <div className="team-details-container">
       <div className="team-member-card">
           <div className="image-section">

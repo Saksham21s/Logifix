@@ -461,7 +461,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      {/* Testinomials section starts here */}
+      {/* Testimals section starts here */}
       <section className="home-testimonial">
         <div className="testimonial-container">
           <div className="testimonial-header">

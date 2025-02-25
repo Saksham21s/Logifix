@@ -1105,6 +1105,7 @@
 /*-----------Packages Section starts here ---------------*/
 .packages {
   background-color: #f4f4fb;
+  background: url('../Assets/pricing-bg.jpg');
   padding: 80px 20px;
 }
 
@@ -1194,6 +1195,7 @@
 .get-started {
   color: black;
   border: 1px solid black;
+  background-color: white;
   padding: 12px 30px;
   border-radius: 5px;
   font-size: 16px;

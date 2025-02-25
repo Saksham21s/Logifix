@@ -8,7 +8,7 @@ import { FaStar } from 'react-icons/fa';
 const ProjectList = () => {
     return (
         <div>
-            <PageTitle title="Projects" />
+            <PageTitle title="Project Details" />
             <section className="project-list-container">
                 <div className="project-image">
                     <img src={projectImage} alt="Project" />
