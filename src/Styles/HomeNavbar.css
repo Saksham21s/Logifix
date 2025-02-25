@@ -23,7 +23,7 @@
 }
 
 .signup-btn {
-    width: 150px;
+    width: 165px;
     height: 80px;
     display: inline-flex;
     align-items: center;
@@ -248,6 +248,11 @@
 
 .icon-link{
     padding-inline: 15px;
+    text-decoration: none;
+
+    i{
+        color: white;
+    }
 }
 
 

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import "../Styles/Navbar.css";
 import "../Styles/HomeNavbar.css";
 import { FaMapMarkerAlt, FaBell, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaHeadphones, FaSearch, FaShoppingCart, FaClock, FaPhoneAlt, FaTimes } from 'react-icons/fa';
-import Logo from "../Assets/logo-white.png";
+import Logo from "../Assets/logo.png";
 import LogoWhite from "../Assets/logo-white.png";
 
 const Navbar = () => {
@@ -62,7 +62,7 @@ const Navbar = () => {
                 <div className="container">
                     <div className="navbar-logo">
                         <Link to="/">
-                            <img src={Logo} alt="Logo" />
+                            <img src={LogoWhite} alt="Logo" />
                         </Link>
                     </div>
 
