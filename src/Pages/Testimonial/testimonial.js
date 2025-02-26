@@ -9,7 +9,7 @@ const Testimonial = () => {
  
   return (
     <div>
-      <PageTitle title="Testinomial" />
+      <PageTitle title="Testimonial" />
       <section className="home-testimonial">
         <div className="testimonial-container">
           <div className="testimonial-header">

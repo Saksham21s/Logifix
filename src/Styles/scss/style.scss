@@ -1545,3 +1545,543 @@ h6 {
     width: 100%;
   }
 }
+
+/*----------------News Section starts Here --------------------*/
+
+.news-details-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-content {
+  flex: 2;
+  padding: 20px;
+}
+
+.news-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.news-meta {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 60px;
+}
+
+.news-author,
+.news-date,
+.news-comments {
+  margin-right: 15px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.news-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.news-text {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.news-tags {
+  margin-top: 20px;
+}
+
+.tag {
+  background-color: #1c1a1a;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-right: 10px;
+  font-size: 0.9rem;
+}
+
+.news-social {
+  margin-top: 20px;
+}
+
+.social-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.news-sidebar {
+  flex: 1;
+  padding: 20px;
+}
+
+.sidebar-search {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  background-color: #f8f6f1;
+  border-radius: 8px 0 0 8px;
+}
+
+.search-button {
+  background-color: #000000;
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.sidebar-latest-posts {
+  background-color: #f8f6f1;
+  border-radius: 10px;
+  padding-inline: 50px;
+  padding-block: 40px;
+}
+
+.sidebar-latest-posts,
+.sidebar-categories,
+.sidebar-tags,
+.sidebar-recent-comments {
+  margin-bottom: 30px;
+  background-color: #f8f6f1;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-inline: 12px;
+  font-weight: 600;
+}
+
+.post {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.post-image {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.post-content {
+  flex: 1;
+}
+
+.post-author {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.post-title {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.category,
+.sidebar-tags .tag {
+  background-color: #f8f6f1;
+  color: rgb(72, 68, 68);
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.category.active {
+  background-color: #ffffff;
+  font-weight: bold;
+  color: #141212;
+}
+
+.related-posts {
+  display: flex;
+  margin-top: 30px;
+}
+
+.related-post {
+  flex: 1;
+  background-color: #f8f6f1;
+  padding: 60px;
+  line-height: 50px;
+  border-radius: 12px;
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.related-post-content {
+  font-weight: bold;
+}
+
+.comments-section {
+  margin-top: 30px;
+
+  h2 {
+    font-weight: 600;
+  }
+}
+
+.comment {
+  display: flex;
+  margin-block: 20px;
+  padding: 20px;
+}
+
+.comment-author-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-right: 15px;
+
+  img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+}
+
+.comment-content {
+  flex: 1;
+  padding-inline: 40px;
+
+  p {
+    color: rgb(74, 74, 74);
+  }
+}
+
+.comment-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.reply-button {
+  background-color: #dd1c1c;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.leave-comment-section {
+  margin-top: 30px;
+
+  h2 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+}
+
+.comment-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.comment-input {
+  padding: 10px;
+  background-color: #f4f5f8;
+  border: 1px solid #f4f5f8;
+  border-radius: 5px;
+}
+
+.comment-textarea {
+  padding: 10px;
+  background-color: #f4f5f8;
+  border: 1px solid #f4f5f8;
+  border-radius: 5px;
+  resize: vertical;
+  min-height: 100px;
+  grid-column: span 2;
+}
+
+.submit-comment-button {
+  background-color: #e51414;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  grid-column: span 2;
+}
+
+.sidebar-tags {
+  padding: 40px;
+
+  .sidebar-grid-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+.sidebar-tags .tag {
+  margin: 5px;
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 30px;
+}
+
+.sidebar-recent-comments {
+  background-color: #f8f6f1;
+  padding: 60px;
+  border-radius: 12px;
+}
+
+.recent-comment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.recent-comment-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e22424;
+  margin-right: 10px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.recent-comment-content {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .news-details-content {
+    flex-direction: column;
+  }
+
+  .news-content {
+    width: 100%;
+  }
+
+  .news-sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .related-posts {
+    flex-direction: column;
+  }
+
+  .related-post {
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding: 30px;
+  }
+
+  .comment-form {
+    grid-template-columns: 1fr;
+  }
+
+  .comment-textarea,
+  .submit-comment-button {
+    grid-column: span 1;
+  }
+}
+
+
+/*--------------COntact Page starts here ------------------------------*/
+
+.contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  padding: 40px;
+
+  h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-block: 20px;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: #e51414;
+}
+
+.contact-details h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contact-details p {
+  line-height: 1.6;
+}
+
+.contact-form-section {
+  flex: 2;
+  min-width: 400px;
+  padding: 40px;
+}
+
+.contact-form-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.comment-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.comment-input {
+  padding: 10px;
+  background-color: #f4f5f8;
+  border: 1px solid #f4f5f8;
+  border-radius: 5px;
+}
+
+.comment-textarea {
+  padding: 10px;
+  background-color: #f4f5f8;
+  border: 1px solid #f4f5f8;
+  border-radius: 5px;
+  resize: vertical;
+  min-height: 100px;
+  grid-column: span 2;
+}
+
+.submit-comment-button {
+  background-color: #e51414;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 200px;
+  grid-column: span 2;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form-section {
+    min-width: 100%;
+    padding: 20px;
+  }
+
+  .comment-form {
+    grid-template-columns: 1fr;
+  }
+
+  .comment-textarea,
+  .submit-comment-button {
+    grid-column: span 1;
+  }
+}
+
+
+/*-----------------Page Not Found -------------------*/
+.not-found-page {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.not-found-image {
+  max-width: 500px;
+  margin: 0 auto 30px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.not-found-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.not-found-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.not-found-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+  background-color: #0f0f0f;
+  border: 1px solid #ddd;
+  border-radius: 0 5px 5px 0;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.back-to-home {
+  display: inline-block;
+  background-color: #e51414;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c80f0f;
+  }
+}
+
+@media (max-width: 768px) {
+  .not-found-content h1 {
+    font-size: 2.5rem;
+  }
+}

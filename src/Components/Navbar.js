@@ -44,7 +44,7 @@ const Navbar = () => {
                         <div className="top-navbar-left">
                             <span className="address"><i><FaMapMarkerAlt /></i> 1901 Broadway, New York</span>
                             <span className="hours"><i><FaBell /></i> Mon-Fri: 09.00am-10.00 pm</span>
-                            <span className="email"><i><FaEnvelope /></i> info_ourmail@Logifix.com</span>
+                            <span className="email"><i><FaEnvelope /></i> info@logifix.com</span>
                         </div>
                         <div className="top-navbar-right">
                             <div className="social-icons">
@@ -100,7 +100,7 @@ const Navbar = () => {
                                         <li><Link className="dropdown-item" to="/checkout">Checkout</Link></li>
                                     </ul>
                                 </li>
-                                <li><Link className="dropdown-item" to="/testinomial">Testimonial</Link></li>
+                                <li><Link className="dropdown-item" to="/testimonial">Testimonial</Link></li>
                                 <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
                             </ul>
                         </li>
@@ -200,7 +200,7 @@ const Navbar = () => {
                                                     <li><Link className="dropdown-item" to="/checkout" onClick={closeNavbar}>Checkout</Link></li>
                                                 </ul>
                                             </li>
-                                            <li><Link className="dropdown-item" to="/testinomial" onClick={closeNavbar}>Testinomial</Link></li>
+                                            <li><Link className="dropdown-item" to="/testimonial" onClick={closeNavbar}>Testimonial</Link></li>
                                             <li><Link className="dropdown-item" to="/pricing" onClick={closeNavbar}>Pricing</Link></li>
                                         </ul>
                                     </li>

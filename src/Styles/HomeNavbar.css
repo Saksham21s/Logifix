@@ -1,4 +1,7 @@
 /*------------Navbar Top styling ---------------------*/
+a{
+    text-decoration: none;
+}
 .navbar-top {
     background-color: #27292c !important;
     color: white !important;
@@ -32,12 +35,12 @@
     font-size: 16px;
     font-weight: 700;
     border-radius: 5px;
-    padding: 19px 30px;
+    padding: 20px;
     position: relative;
     overflow: hidden;
     color: white;
     background: #ff2600;
-    border: none;
+    border: 1px solid #ff2600;
     transition: color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
@@ -176,7 +179,6 @@
         justify-content: space-between;
         align-items: center;
     }
-    
 }
 
 .navbar .dropdown-submenu:hover > .dropdown-menu {
@@ -247,18 +249,17 @@
     }
 }
 
-.icon-link{
+.icon-link {
     padding-inline: 15px;
     text-decoration: none;
 
-    i{
+    i {
         color: white;
     }
 }
 
-
 .offcanvas.offcanvas-end {
-    width: 310px; 
+    width: 310px;
 }
 
 .offcanvas-overlay {
@@ -271,26 +272,23 @@
     z-index: 940;
 }
 
-
 .custom-offcanvas {
     background-color: black !important;
 }
 
 @media (max-width: 991px) {
-    .custom-offcanvas .nav-link, 
+    .custom-offcanvas .nav-link,
     .custom-offcanvas .dropdown-item {
         background-color: black;
         color: white !important;
     }
-    .custom-offcanvas .nav-link {
+
+    .custom-offcanvas .dropdown-menu {
+        background-color: black !important;
         border: none;
     }
-    .custom-offcanvas .nav-link {
-        background-color: black;
-        color: white !important;
-    }
-    
-    .custom-offcanvas .nav-link:hover, 
+
+    .custom-offcanvas .nav-link:hover,
     .custom-offcanvas .dropdown-item:hover {
         color: yellow !important;
     }
@@ -302,16 +300,16 @@
 }
 
 @media (min-width: 992px) {
-    .custom-offcanvas .nav-link, 
+    .custom-offcanvas .nav-link,
     .custom-offcanvas .dropdown-item {
-        color: black !important; 
+        color: black !important;
     }
 }
 
-.offcanvas-icon-details{
+.offcanvas-icon-details {
     margin-left: 20px;
 
-    span{
+    span {
         color: azure;
     }
 }

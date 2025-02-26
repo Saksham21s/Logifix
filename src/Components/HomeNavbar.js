@@ -83,7 +83,7 @@ const Navbar = () => {
                                                 <li><Link className="dropdown-item" to="/checkout" onClick={closeNavbar}>Checkout</Link></li>
                                             </ul>
                                         </li>
-                                        <li><Link className="dropdown-item" to="/testinomial" onClick={closeNavbar}>Testinomial</Link></li>
+                                        <li><Link className="dropdown-item" to="/testimonial" onClick={closeNavbar}>Testimonial</Link></li>
                                         <li><Link className="dropdown-item" to="/pricing" onClick={closeNavbar}>Pricing</Link></li>
                                     </ul>
                                 </li>
@@ -108,8 +108,8 @@ const Navbar = () => {
                     <Link to="/cart" className="icon-link"><i className="fas fa-shopping-cart"></i></Link>
                     <Link to="/search" className="icon-link"><i className="fas fa-search"></i></Link>
                 </div>
-                <Link to="/contacts">
-                    <div className="signup-btn"> <span>Sign Up &nbsp;</span> <FaArrowRight className="icon" /></div>
+                <Link to="/contact">
+                    <div className="signup-btn"> <span>Sign Up</span> <FaArrowRight className="icon" /></div>
                 </Link>
             </nav>
 
@@ -169,7 +169,7 @@ const Navbar = () => {
                                                     <li><Link className="dropdown-item" to="/checkout" onClick={closeNavbar}>Checkout</Link></li>
                                                 </ul>
                                             </li>
-                                            <li><Link className="dropdown-item" to="/testinomial" onClick={closeNavbar}>Testinomial</Link></li>
+                                            <li><Link className="dropdown-item" to="/testimonial" onClick={closeNavbar}>Testimonial</Link></li>
                                             <li><Link className="dropdown-item" to="/pricing" onClick={closeNavbar}>Pricing</Link></li>
                                         </ul>
                                     </li>
