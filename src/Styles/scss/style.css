@@ -1177,10 +1177,6 @@ h6 {
     height: 250px;
   }
 }
-.service-details-page {
-  padding: 20px;
-}
-
 .service-details-content {
   display: flex;
   max-width: 1200px;
