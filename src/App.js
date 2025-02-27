@@ -18,6 +18,9 @@ import ServiceDetails from "./Pages/Services/ServiceDetails";
 import NewsGrid from "./Pages/News/NewsGrid";
 import NewsDetails from "./Pages/News/NewsDetails";
 import Contact from "./Pages/Contact/Contact";
+import Products from "./Pages/Shop/Products";
+import ProductsWithSidebar from "./Pages/Shop/ProductsWithSidebar";
+import Cart from "./Pages/Shop/Cart";
 
 const AppLayout = () => {
   const location = useLocation();
@@ -36,6 +39,9 @@ const AppLayout = () => {
     { path: "/news-grid", element: <NewsGrid /> },
     { path: "/news-details", element: <NewsDetails /> },
     { path: "/contact", element: <Contact /> },
+    { path: "/products", element: <Products /> },
+    { path: "/products-with-sidebar", element: <ProductsWithSidebar /> },
+    { path: "/cart", element: <Cart /> },
     { path: "/404", element: <NotFound /> },
     { path: "*", element: <NotFound /> },
     { path: "/search", element: <SearchPage /> },

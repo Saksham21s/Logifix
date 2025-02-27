@@ -95,9 +95,7 @@ const Navbar = () => {
                                     <ul className="dropdown-menu">
                                         <li><Link className="dropdown-item" to="/products">Products</Link></li>
                                         <li><Link className="dropdown-item" to="/products-with-sidebar">Products with Sidebar</Link></li>
-                                        <li><Link className="dropdown-item" to="/product-details">Product Details</Link></li>
                                         <li><Link className="dropdown-item" to="/cart">Cart</Link></li>
-                                        <li><Link className="dropdown-item" to="/checkout">Checkout</Link></li>
                                     </ul>
                                 </li>
                                 <li><Link className="dropdown-item" to="/testimonial">Testimonial</Link></li>
@@ -195,9 +193,7 @@ const Navbar = () => {
                                                 <ul className={`dropdown-menu ${activeDropdown === "shop" ? "show" : ""}`}>
                                                     <li><Link className="dropdown-item" to="/products" onClick={closeNavbar}>Products</Link></li>
                                                     <li><Link className="dropdown-item" to="/products-with-sidebar" onClick={closeNavbar}>Products with sidebar</Link></li>
-                                                    <li><Link className="dropdown-item" to="/product-details" onClick={closeNavbar}>Products details</Link></li>
                                                     <li><Link className="dropdown-item" to="/cart" onClick={closeNavbar}>Cart</Link></li>
-                                                    <li><Link className="dropdown-item" to="/checkout" onClick={closeNavbar}>Checkout</Link></li>
                                                 </ul>
                                             </li>
                                             <li><Link className="dropdown-item" to="/testimonial" onClick={closeNavbar}>Testimonial</Link></li>
