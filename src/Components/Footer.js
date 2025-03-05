@@ -69,11 +69,11 @@ const Footer = () => {
                             <div className="footer-section">
                                 <h3>Useful Links</h3>
                                 <ul>
-                                    <li><a href="/about-us"><i class="rect-icon">&gt;</i> About Us</a></li>
-                                    <li><a href="/services"><i class="rect-icon">&gt;</i> Our Services</a></li>
-                                    <li><a href="/clients"><i class="rect-icon">&gt;</i> Our Clients</a></li>
-                                    <li><a href="/testimonials"><i class="rect-icon">&gt;</i> Testimonial</a></li>
-                                    <li><a href="/news"><i class="rect-icon">&gt;</i> News & Media</a></li>
+                                    <li><a href="/about"><i class="rect-icon">&gt;</i> About Us</a></li>
+                                    <li><a href="/details"><i class="rect-icon">&gt;</i> Our Services</a></li>
+                                    <li><a href="/products"><i class="rect-icon">&gt;</i> Our Products</a></li>
+                                    <li><a href="/testimonial"><i class="rect-icon">&gt;</i> Testimonial</a></li>
+                                    <li><a href="/news-grid"><i class="rect-icon">&gt;</i> News & Media</a></li>
                                 </ul>
                             </div>
                         </div>
