@@ -190,7 +190,7 @@ const HeroSection = () => {
               <h1>Logistics & Cargo <br /> For Business</h1>
               <p>With over four decades of experience providing solutions to large-scale enterprises.</p>
               <div className="hero-buttons">
-                <Link to="/services" className="btn btn-primary">
+                <Link to="/about" className="btn btn-primary">
                   <span>Explore More &nbsp;</span>
                   <i><FaArrowRight className="icon" /></i>
                 </Link>
@@ -267,7 +267,7 @@ const HeroSection = () => {
                 </div>
               </div>
               <div className="hero-buttons">
-                <Link to="/services" className="btn btn-primary">
+                <Link to="/details" className="btn btn-primary">
                   <span>Explore More &nbsp;</span>
                   <i><FaArrowRight className="icon" /></i>
                 </Link>
@@ -334,7 +334,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="hero-buttons homeService-btn">
-            <Link to="/services" className="btn btn-primary">
+            <Link to="/project-list" className="btn btn-primary">
               <span>Explore More &nbsp;</span>
               <i><FaArrowRight className="icon" /></i>
             </Link>
@@ -421,7 +421,7 @@ const HeroSection = () => {
               </div>
             </div>
             <div className="hero-buttons">
-              <Link to="/services" className="btn btn-primary">
+              <Link to="/pricing" className="btn btn-primary">
                 <span>Explore More &nbsp;</span>
                 <i><FaArrowRight className="icon" /></i>
               </Link>
